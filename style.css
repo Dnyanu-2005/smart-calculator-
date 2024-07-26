@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #4a729a, #a75454);
+}
+
+.container {
+    width: 320px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.display {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.display input {
+    width: 100%;
+    padding: 15px;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.display input:focus {
+    background-color: #fff;
+    color: #000;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.buttons input {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons input:hover {
+    background-color: #d0d0d0;
+}
+
+.buttons input.operator {
+    background: linear-gradient(135deg, #ff9500, #ff6f00);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttons input.operator:hover {
+    background: linear-gradient(135deg, #ff6f00, #ff9500);
+}
+
+.buttons input.equal {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    grid-column: span 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttons input.equal:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+}
+
+.history button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.history button:hover {
+    background-color: #e60000;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.history li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
